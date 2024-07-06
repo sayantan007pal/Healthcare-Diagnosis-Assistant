@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Diagnosis Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Healthcare Diagnosis Assistant</h1>
+        <form action="/predict" method="POST">
+            <label for="age">Patient's Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter age" required>
+
+            <label for="gender">Patient's Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+
+            <label for="symptom1">Symptom 1:</label>
+            <select id="symptom1" name="symptom1" required>
+                <option value="Fever">Fever</option>
+                <option value="Cough">Cough</option>
+                <option value="Fatigue">Fatigue</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="symptom2">Symptom 2:</label>
+            <select id="symptom2" name="symptom2" required>
+                <option value="Headache">Headache</option>
+                <option value="Sore throat">Sore throat</option>
+                <option value="Shortness of breath">Shortness of breath</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="symptom3">Symptom 3:</label>
+            <select id="symptom3" name="symptom3" required>
+                <option value="Nausea">Nausea</option>
+                <option value="Muscle pain">Muscle pain</option>
+                <option value="Loss of taste or smell">Loss of taste or smell</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <button type="submit">Predict Diagnosis</button>
+        </form>
+    </div>
+</body>
+</html>
